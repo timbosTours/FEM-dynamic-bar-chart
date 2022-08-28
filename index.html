@@ -5,39 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./styles.css">
+
+  <script src="./app.js"></script>
   
   <title>Frontend Mentor | Expenses chart component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+<main>
+  <div id="conatiner">
+  <div id="my-balance">
+  <h1 id="balance-h1">My balance $921.48</h1>
+</div>
+<div id="spending">
+  <h2 id="spending-h2">Spending - Last 7 days</h2>
 
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
+  <canvas id="dynamic-chart" width="400" height="400">
+  <!-- mon
   tue
   wed
   thu
   fri
   sat
-  sun
+  sun -->
+</canvas>
+  <h3 id="total-this-month">Total this month
+  $478.33</h3>
 
-  Total this month
-  $478.33
+  <h4 id="difference-last-month">+2.4%
+  from last month</h4>
+</div>
+</div>
+  </main>
 
-  +2.4%
-  from last month
-  
+  <footer>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Timothy Fawcett</a>.
   </div>
+</footer>
 </body>
 </html>
