@@ -8,22 +8,22 @@
 
   <link rel="stylesheet" href="./styles.css">
 
-  <script src="./app.js"></script>
+
   
   <title>Frontend Mentor | Expenses chart component</title>
-
+  
 </head>
 
 <body>
-<main>
-  <div id="conatiner">
-  <div id="my-balance">
-  <h1 id="balance-h1">My balance $921.48</h1>
-</div>
-<div id="spending">
-  <h2 id="spending-h2">Spending - Last 7 days</h2>
-
-  <canvas id="dynamic-chart" width="400" height="400">
+  <main>
+    <div id="conatiner">
+      <div id="my-balance">
+        <h1 id="balance-h1">My balance $921.48</h1>
+      </div>
+      <div id="spending">
+        <h2 id="spending-h2">Spending - Last 7 days</h2>
+        
+<canvas id="dynamic-chart" width="400" height="400">
   <!-- mon
   tue
   wed
@@ -47,5 +47,9 @@
     Coded by <a href="#">Timothy Fawcett</a>.
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js">
+  updateChart();
+</script>
 </body>
 </html>
