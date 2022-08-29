@@ -94,8 +94,13 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+Boiler plate code from chart.js. I used this to get started so I could build out the JS logic before styling with CSS.
+
+- https://www.chartjs.org/docs/latest/
+
+I used this video the help with loading dynamic data from JSON to chart.js.
+
+- https://www.youtube.com/watch?v=mw5i_QGDomw&t=284s
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
