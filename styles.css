@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-cream: hsl(27, 66%, 92%);
+    --soft-red: hsl(10, 79%, 65%);
+
+    --ff-dmSans: 'DM Sans', sans-serif;
+}
+
+body{
+    background-color: var(--bg-cream);
+    /* Center the div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#container{
+    max-width: 20rem;
+    
+}
+
+#my-balance{
+    /* border: 2px solid blue; */
+    background-color: var(--soft-red);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#text-container{
+    /* border: 1px solid black; */
+}
+
+#balance-h1{
+    color: white;
+    font-family: var(--ff-dmSans);
+    font-size: 85%;
+    font-weight: normal;
+    float: left;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+#balance-amount{
+    font-family: var(--ff-dmSans);
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-left: -7px;
+}
+
+#logo-img{
+    margin: 0.5rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    display: none;
+}
