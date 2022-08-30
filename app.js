@@ -31,7 +31,7 @@ function updateChart() {
     
     // set up the chart
     const data = {
-        labels: ['red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'hotpink'],
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'hotpink'],
             datasets: [{
                 // label: '',
                 data: [12, 19, 3, 5, 2, 3],
