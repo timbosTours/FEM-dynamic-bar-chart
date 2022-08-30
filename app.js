@@ -1,76 +1,84 @@
+// moved this variable to global scope to make bar colors dynamic
+const bgColor = []
 // wrap in function to update chart
 function updateChart() {
     //  create function to retrieve JSON data
     async function getData() {
         const myData = 'http://127.0.0.1:5500/data.json';
+        
         const response = await fetch(myData)
 
         // turn data into JS readable JSON
         const datapoints = await response.json();
 
         return datapoints;
+
+        
     }
 
-    // get the data from the JSON file
-    getData().then(datapoints => {
-        const days = datapoints.map(
-            (index) => {
-                return index.day;
+        // get the data from the JSON file
+        getData().then(datapoints => {
+            const days = datapoints.map(
+                (index) => {
+                    return index.day;
+                })
+            const values = datapoints.map(
+                (index) => {
+                    return index.amount;
+                })
+            
+            // append the data to the chart
+            dynamicChart.config.data.labels = days;
+            dynamicChart.config.data.datasets[0].data = values;
+            // give bar with highest value a different color
+            const max = Math.max(...values)
+            const highestValueColor = values.map((datapoint, index) => {
+                const color = datapoint === max ? 'rgba(118, 181, 188, 1)':'rgba(236, 119, 95, 0.9)'   ;
+                bgColor.push(color)
             })
-        const values = datapoints.map(
-            (index) => {
-                return index.amount;
-            })
-        // append the data to the chart
-        dynamicChart.config.data.labels = days;
-        dynamicChart.config.data.datasets[0].data = values;
-        console.log(days);
-        console.log(values);
-        dynamicChart.update();
-    });
+            console.log(bgColor);
+            // console.log(max)
+            // console.log(days);
+            // console.log(values);
+            dynamicChart.update();
+        });
     
-    // set up the chart
-    const data = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'hotpink'],
+    
+        // set up the chart
+        const data = {
             datasets: [{
-                // label: '',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
+                backgroundColor: bgColor,
+                borderRadius: '3',
+                
             }]
-    }
-    // configure the chart
-    const config = {
-        type: 'bar',
-        data,
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+        }
+        // configure the chart
+        const config = {
+            type: 'bar',
+            data,
+            options: {
+                // hide the legend
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                // hide the grid lines
+                scales: {
+                    y: {
+                        display: false,
+                    },
+                    x: {
+                        display: false
+                    }
                 }
             }
-        }
-    };
+        };
 
-    // Render the chart
-    const dynamicChart = new Chart(
-        document.getElementById('dynamic-chart'),
-        config
-    );
-}
+        // Render the chart
+        const dynamicChart = new Chart(
+            document.getElementById('dynamic-chart'),
+            config
+        );
+};        
 updateChart();
