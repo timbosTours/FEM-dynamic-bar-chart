@@ -22,20 +22,18 @@ function updateChart() {
                 return index.amount;
             })
         // append the data to the chart
-        myChart.config.data.labels = days;
-        myChart.config.data.datasets[0].data = values;
+        dynamicChart.config.data.labels = days;
+        dynamicChart.config.data.datasets[0].data = values;
         console.log(days);
         console.log(values);
-        myChart.update();
+        dynamicChart.update();
     });
-
-    const ctx = document.getElementById('dynamic-chart').getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'hotpink'],
+    
+    // set up the chart
+    const data = {
+        labels: ['red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'hotpink'],
             datasets: [{
-                label: '# of Votes',
+                // label: '',
                 data: [12, 19, 3, 5, 2, 3],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
@@ -55,7 +53,11 @@ function updateChart() {
                 ],
                 borderWidth: 1
             }]
-        },
+    }
+    // configure the chart
+    const config = {
+        type: 'bar',
+        data,
         options: {
             scales: {
                 y: {
@@ -63,6 +65,12 @@ function updateChart() {
                 }
             }
         }
-    });
+    };
+
+    // Render the chart
+    const dynamicChart = new Chart(
+        document.getElementById('dynamic-chart'),
+        config
+    );
 }
 updateChart();
