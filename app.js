@@ -33,24 +33,25 @@ function updateChart() {
             // give bar with highest value a different color
             const max = Math.max(...values)
             const highestValueColor = values.map((datapoint, index) => {
-                const color = datapoint === max ? 'rgba(118, 181, 188, 1)':'rgba(236, 119, 95, 0.9)'   ;
+                const color = datapoint === max ? 'rgba(118, 181, 188, 1)':'rgba(236, 119, 95, 1)'   ;
                 bgColor.push(color)
             })
             console.log(bgColor);
-            // console.log(max)
-            // console.log(days);
-            // console.log(values);
+            console.log(max)
+            console.log(days);
+            console.log(values);
             dynamicChart.update();
         });
     
     
         // set up the chart
-        const data = {
+    const data = {
             datasets: [{
                 backgroundColor: bgColor,
+                hoverBackgroundColor: 'rgba(236, 119, 95, 0.6)',
                 borderRadius: '3',
                 
-            }]
+        }],
         }
         // configure the chart
         const config = {
