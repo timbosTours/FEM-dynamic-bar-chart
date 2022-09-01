@@ -36,6 +36,7 @@ function updateChart() {
                 const color = datapoint === max ? 'rgba(118, 181, 188, 1)':'rgba(236, 119, 95, 1)'   ;
                 bgColor.push(color)
             })
+            const labelDays = days.push()
             console.log(bgColor);
             console.log(max)
             console.log(days);
@@ -46,9 +47,10 @@ function updateChart() {
     
         // set up the chart
     const data = {
+            labels: [],
             datasets: [{
                 backgroundColor: bgColor,
-                hoverBackgroundColor: 'rgba(236, 119, 95, 0.6)',
+                hoverOverBackgroundColor: 'hsl(33, 100%, 98%))',
                 borderRadius: '3',
                 
         }],
@@ -70,7 +72,14 @@ function updateChart() {
                         display: false,
                     },
                     x: {
-                        display: false
+                        display: true,
+                        ticks: {
+                            color: 'hsl(28, 10%, 53%)',
+                        },
+                        grid: {
+                            color: 'white',
+                            borderColor: 'white'
+                        }
                     }
                 }
             }
