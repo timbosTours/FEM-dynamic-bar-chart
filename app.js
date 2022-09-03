@@ -1,5 +1,6 @@
 // moved this variable to global scope to make bar colors dynamic
 const bgColor = []
+const hoverColor = []
 // wrap in function to update chart
 function updateChart() {
     //  create function to retrieve JSON data
@@ -36,20 +37,26 @@ function updateChart() {
             const color = datapoint === max ? 'rgba(118, 181, 188, 1)' : 'rgba(236, 119, 95, 1)';
             bgColor.push(color)
         })
+        const onHoverColor = values.map((datapoint, index) => {
+            const color = datapoint === max ? 'rgba(118, 181, 188, 0.6)' : 'rgba(236, 119, 95, 0.6)';
+            hoverColor.push(color)
+        })
         const labelDays = days.push()
         console.log(bgColor);
+        console.log(hoverColor);
         console.log(max)
         console.log(days);
         console.log(values);
         dynamicChart.update();
-    });
-    
-    
+    }); 
+
+
     // set up the chart
     const data = {
         labels: [],
         datasets: [{
             backgroundColor: bgColor,
+            hoverBackgroundColor: hoverColor,
             borderRadius: '3',
                 
         }],
