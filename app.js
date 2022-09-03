@@ -37,6 +37,7 @@ function updateChart() {
             const color = datapoint === max ? 'rgba(118, 181, 188, 1)' : 'rgba(236, 119, 95, 1)';
             bgColor.push(color)
         })
+        // lower opacity on hover
         const onHoverColor = values.map((datapoint, index) => {
             const color = datapoint === max ? 'rgba(118, 181, 188, 0.6)' : 'rgba(236, 119, 95, 0.6)';
             hoverColor.push(color)
@@ -88,7 +89,8 @@ function updateChart() {
                     },
                     tooltip: {
                         backgroundColor: 'hsl(25, 47%, 15%)',
-                        yAlign: 'bottom',
+                        yAlign: 'none',
+                        caretPadding: 50,
                         displayColors: false,
                         // tooltip label
                         callbacks: {
@@ -122,3 +124,4 @@ function updateChart() {
         );
 };        
 updateChart();
+
