@@ -63,6 +63,17 @@ function updateChart() {
             type: 'bar',
             data,
             options: {
+                // change cursor pointer hover color
+                onHover: (event, chartElement) => {
+                    event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+                    // below is a more elaborate way to get the same result
+                    // if (chartElement.length == 1) {
+                    //     event.native.target.style.cursor = 'pointer';
+                    // }
+                    // if (chartElement.length == 0) {
+                    //     event.native.target.style.cursor = 'default';
+                    // }
+                },
                 // hide the legend
                 plugins: {
                     legend: {
