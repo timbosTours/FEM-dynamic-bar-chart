@@ -16,45 +16,48 @@ function updateChart() {
         
     }
 
-        // get the data from the JSON file
-        getData().then(datapoints => {
-            const days = datapoints.map(
-                (index) => {
-                    return index.day;
-                })
-            const values = datapoints.map(
-                (index) => {
-                    return index.amount;
-                })
-            
-            // append the data to the chart
-            dynamicChart.config.data.labels = days;
-            dynamicChart.config.data.datasets[0].data = values;
-            // give bar with highest value a different color
-            const max = Math.max(...values)
-            const highestValueColor = values.map((datapoint, index) => {
-                const color = datapoint === max ? 'rgba(118, 181, 188, 1)':'rgba(236, 119, 95, 1)'   ;
-                bgColor.push(color)
+    // get the data from the JSON file
+    getData().then(datapoints => {
+        const days = datapoints.map(
+            (index) => {
+                return index.day;
             })
-            const labelDays = days.push()
-            console.log(bgColor);
-            console.log(max)
-            console.log(days);
-            console.log(values);
-            dynamicChart.update();
-        });
+        const values = datapoints.map(
+            (index) => {
+                return index.amount;
+            })
+            
+        // append the data to the chart
+        dynamicChart.config.data.labels = days;
+        dynamicChart.config.data.datasets[0].data = values;
+        // give bar with highest value a different color
+        const max = Math.max(...values)
+        const highestValueColor = values.map((datapoint, index) => {
+            const color = datapoint === max ? 'rgba(118, 181, 188, 1)' : 'rgba(236, 119, 95, 1)';
+            bgColor.push(color)
+        })
+        const labelDays = days.push()
+        console.log(bgColor);
+        console.log(max)
+        console.log(days);
+        console.log(values);
+        dynamicChart.update();
+    });
     
     
-        // set up the chart
+    // set up the chart
     const data = {
-            labels: [],
-            datasets: [{
-                backgroundColor: bgColor,
-                hoverOverBackgroundColor: 'hsl(33, 100%, 98%))',
-                borderRadius: '3',
+        labels: [],
+        datasets: [{
+            backgroundColor: bgColor,
+            borderRadius: '3',
                 
         }],
-        }
+    }
+    // customize tooltip title
+    const titleTooltip = (tooltipItems) => {
+        return ;
+    }
         // configure the chart
         const config = {
             type: 'bar',
@@ -64,6 +67,15 @@ function updateChart() {
                 plugins: {
                     legend: {
                         display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'hsl(25, 47%, 15%)',
+                        yAlign: 'bottom',
+                        displayColors: false,
+                        // tooltip label
+                        callbacks: {
+                            title: titleTooltip
+                        }
                     }
                 },
                 // hide the grid lines
