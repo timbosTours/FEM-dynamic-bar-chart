@@ -1,9 +1,14 @@
-// moved this variable to global scope to make bar colors dynamic
-const bgColor = []
-const hoverColor = []
+// TO DO!!!!!
+// move tooltip box up
+
+
+
+
 // wrap in function to update chart
 function updateChart() {
-    //  create function to retrieve JSON data
+    const bgColor = []
+    const hoverColor = []
+//  create function to retrieve JSON data
     async function getData() {
         const myData = 'http://127.0.0.1:5500/data.json';
         
@@ -89,9 +94,10 @@ function updateChart() {
                     },
                     tooltip: {
                         backgroundColor: 'hsl(25, 47%, 15%)',
-                        yAlign: 'none',
-                        caretPadding: 50,
+                        caretPadding: 10,
+                        yAlign: 'bottom',
                         displayColors: false,
+                        padding: 8,
                         // tooltip label
                         callbacks: {
                             title: titleTooltip
