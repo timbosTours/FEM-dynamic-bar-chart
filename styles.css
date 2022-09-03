@@ -110,3 +110,19 @@ footer{
     bottom: 0;
     display: none;
 }
+
+@media screen and (min-width: 600px){
+    #container{
+        min-width: 26rem;
+    }
+    #dynamic-chart{
+        max-height: 15rem;
+        padding-top: 1em;
+    }
+    #total-div{
+        margin-left: 0.5em;
+    }
+    #difference-div{
+        margin-right: 0.5em;
+    }
+}
