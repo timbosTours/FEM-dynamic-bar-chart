@@ -16,10 +16,9 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
+I really enjoyed this challenge. I decided to use Chart.js to build the chart so I could display the JSON data dynamically. This brought on a lot of challenges which led to a lot of great learning that I am very grateful for.
 ### The challenge
 
 Users should be able to:
