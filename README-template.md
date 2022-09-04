@@ -18,7 +18,9 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 
 
 ## Overview
-I really enjoyed this challenge. I decided to use Chart.js to build the chart so I could display the JSON data dynamically. This brought on a lot of challenges which led to a lot of great learning that I am very grateful for.
+
+I really enjoyed this challenge. I decided to use Chart.js to build the chart so I could display the JSON data dynamically. This brought on a lot of challenges which led to a lot of great learning that I am very grateful for. I look forward to using Chart.js on more projects in the future.
+
 ### The challenge
 
 Users should be able to:
@@ -31,19 +33,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/screen-shot-desktop.png)
+![](./images/screen-shot-mobile-active.png)
+![](./images/screen-shot-desktop-active1.png)
+![](./images/screen-shot-desktop-active2.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://github.com/timbosTours/Frontend-Mentor-expenses-chart-challenge/settings/pages
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process

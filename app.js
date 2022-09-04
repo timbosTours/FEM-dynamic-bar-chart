@@ -4,7 +4,7 @@ function updateChart() {
     const hoverColor = []
 //  create function to retrieve JSON data
     async function getData() {
-        const myData = 'http://127.0.0.1:5500/data.json';
+        const myData = 'https://raw.githubusercontent.com/timbosTours/Frontend-Mentor-expenses-chart-challenge/main/data.json';
         
         const response = await fetch(myData)
 
