@@ -68,9 +68,14 @@ function updateChart() {
         }],
     }
     // customize tooltip title
-    const titleTooltip = (tooltipItems) => {
-        return ;
-    }
+    let titleTooltip = (tooltipItems) => {
+        tooltipItems.forEach(function(tooltipItem) {
+        tooltiplabel = '$' + tooltipItem.raw.toLocaleString();
+        });
+        console.log(tooltipItems[0].raw);
+        return tooltiplabel;
+        }
+
         // configure the chart
         const config = {
             type: 'bar',
@@ -95,13 +100,22 @@ function updateChart() {
                     tooltip: {
                         backgroundColor: 'hsl(25, 47%, 15%)',
                         caretPadding: 10,
+                        caretSize: 0,
                         yAlign: 'bottom',
                         displayColors: false,
                         padding: 8,
+                        // hide the title
+                        bodyFont: {
+                            size: 0
+                        },
+                        titleFont: {
+                            weight: 'light'
+                        },
+                        titleMarginBottom: 0,
                         // tooltip label
                         callbacks: {
-                            title: titleTooltip
-                        }
+                            title: titleTooltip,
+                            }
                     }
                 },
                 // hide the grid lines
