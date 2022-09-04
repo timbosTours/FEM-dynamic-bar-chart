@@ -117,10 +117,13 @@ footer{
     }
     #dynamic-chart{
         max-height: 15rem;
-        padding-top: 1em;
+        padding-top: 2em;
     }
     #total-div{
         margin-left: 0.5em;
+    }
+    #monthly-total{
+        font-size: xx-large;
     }
     #difference-div{
         margin-right: 0.5em;

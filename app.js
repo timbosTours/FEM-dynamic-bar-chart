@@ -1,9 +1,3 @@
-// TO DO!!!!!
-// move tooltip box up
-
-
-
-
 // wrap in function to update chart
 function updateChart() {
     const bgColor = []
@@ -83,14 +77,8 @@ function updateChart() {
             options: {
                 // change cursor pointer hover color
                 onHover: (event, chartElement) => {
+                    // if statement for hover on/off bars
                     event.native.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
-                    // below is a more elaborate way to get the same result
-                    // if (chartElement.length == 1) {
-                    //     event.native.target.style.cursor = 'pointer';
-                    // }
-                    // if (chartElement.length == 0) {
-                    //     event.native.target.style.cursor = 'default';
-                    // }
                 },
                 // hide the legend
                 plugins: {
@@ -99,7 +87,7 @@ function updateChart() {
                     },
                     tooltip: {
                         backgroundColor: 'hsl(25, 47%, 15%)',
-                        caretPadding: 10,
+                        caretPadding: 20,
                         caretSize: 0,
                         yAlign: 'bottom',
                         displayColors: false,
@@ -109,7 +97,8 @@ function updateChart() {
                             size: 0
                         },
                         titleFont: {
-                            weight: 'light'
+                            weight: 'normal',
+                            size: 16
                         },
                         titleMarginBottom: 0,
                         // tooltip label
