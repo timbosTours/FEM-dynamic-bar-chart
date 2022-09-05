@@ -86,6 +86,7 @@ function updateChart() {
                         display: false
                     },
                     tooltip: {
+                        position: 'nearest',
                         backgroundColor: 'hsl(25, 47%, 15%)',
                         caretPadding: 20,
                         caretSize: 0,
