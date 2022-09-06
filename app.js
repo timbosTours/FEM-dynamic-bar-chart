@@ -75,6 +75,13 @@ function updateChart() {
             type: 'bar',
             data,
             options: {
+                layout: {
+                    padding: {
+                        top: 30,
+                        left: 12,
+                        right: 12
+                    }
+                },
                 // change cursor pointer hover color
                 onHover: (event, chartElement) => {
                     // if statement for hover on/off bars
@@ -88,7 +95,7 @@ function updateChart() {
                     tooltip: {
                         position: 'nearest',
                         backgroundColor: 'hsl(25, 47%, 15%)',
-                        caretPadding: 20,
+                        caretPadding: 10,
                         caretSize: 0,
                         yAlign: 'bottom',
                         displayColors: false,
@@ -119,8 +126,8 @@ function updateChart() {
                             color: 'hsl(28, 10%, 53%)',
                         },
                         grid: {
-                            color: 'white',
-                            borderColor: 'white'
+                            color: 'hsl(33, 100%, 98%)',
+                            borderColor: 'hsl(33, 100%, 98%)'
                         }
                     }
                 }

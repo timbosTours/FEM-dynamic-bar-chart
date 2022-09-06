@@ -11,7 +11,6 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -58,20 +57,6 @@ I went for a mobile first approach, working top down I started with styling the 
 
 I learnt that I really enjoy Chart.js. I found having good documentation accompanied by some in depth youtube videos made it relatively easy to work with.
 
-### Continued development
-
-Two things I would like to fix are;
-
-If anyone has any solutions that would be greatly appreciated?
-
-On the left and right side bars the tooltip box gets pushed in, instead af sitting directly over the bar:
-
-![](./images/screen-shot-badState1.png)
-![](./images/screen-shot-badState2.png)
-
-And on top of the large blue bar the tooltip box doesn't have a gap between the bar and the box like the other bars do:
-
-![](./images/screen-shot-badState3.png)
 
 ### Useful resources
 

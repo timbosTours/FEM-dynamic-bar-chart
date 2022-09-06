@@ -8,6 +8,7 @@
     --soft-red: hsl(10, 79%, 65%);
     --dark-brown: hsl(25, 47%, 15%);
     --med-brown: hsl(28, 10%, 53%);
+    --very-pale-orange: hsl(33, 100%, 98%);
 
     --ff-dmSans: 'DM Sans', sans-serif;
 }
@@ -23,7 +24,7 @@ body{
 }
 
 #container{
-    max-width: 21rem;
+    max-width: 22rem;
     
 }
 
@@ -37,14 +38,11 @@ body{
     margin-bottom: 1rem;
 }
 
-#text-container{
-    /* border: 1px solid black; */
-}
 
 #balance-h1{
     color: white;
     font-family: var(--ff-dmSans);
-    font-size: 85%;
+    font-size: 100%;
     font-weight: 100;
     float: left;
     padding-top: 0.5em;
@@ -55,7 +53,7 @@ body{
 #balance-amount{
     font-family: var(--ff-dmSans);
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     color: white;
     padding-top: 1.5em;
     /* margin-left: -7px; */
@@ -66,7 +64,7 @@ body{
 }
 
 #spending{
-    background-color: white;
+    background-color: var(--very-pale-orange);
     border-radius: 10px;
     padding: 1em;
     color: var(--dark-brown);
@@ -113,10 +111,10 @@ footer{
 
 @media screen and (min-width: 600px){
     #container{
-        min-width: 26rem;
+        min-width: 32rem;
     }
     #dynamic-chart{
-        max-height: 15rem;
+        max-height: 24rem;
         padding-top: 2em;
     }
     #total-div{
