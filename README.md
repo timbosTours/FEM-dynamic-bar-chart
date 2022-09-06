@@ -34,9 +34,6 @@ Users should be able to:
 
 ![](./images/screen-shot-desktop.png)
 ![](./images/screen-shot-mobile-active.png)
-![](./images/screen-shot-desktop-active1.png)
-![](./images/screen-shot-desktop-active2.png)
-
 
 ### Links
 
