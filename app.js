@@ -3,13 +3,13 @@ function updateChart() {
     const bgColor = []
     const hoverColor = []
 //  create function to retrieve JSON data
-    function getData() {
+    async function getData() {
         const myData = 'http://127.0.0.1:5500/data.json';
         
-        const response = fetch(myData)
+        const response = await fetch(myData)
 
         // turn data into JS readable JSON
-        const datapoints = response.json();
+        const datapoints = await response.json();
 
         return datapoints;
 
