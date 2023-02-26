@@ -1,5 +1,5 @@
 // wrap in function to update chart
-function updateChart() {
+async function updateChart() {
     const bgColor = []
     const hoverColor = []
 //  create function to retrieve JSON data
@@ -9,7 +9,7 @@ function updateChart() {
         const response = await fetch(myData)
 
         // turn data into JS readable JSON
-        const datapoints = await response.json();
+        const datapoints = response.json();
 
         return datapoints;
 
