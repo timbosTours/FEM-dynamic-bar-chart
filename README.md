@@ -33,7 +33,9 @@ Users should be able to:
 ### Screenshot
 
 ![](./images/screen-shot-desktop.png)
-![](./images/screen-shot-mobile-active.png)
+![](./images/screen-shot-mobile.png)
+![](./images/screen-shot-active1.png.png)
+![](./images/screen-shot-active2.png.png)
 
 ### Links
 
@@ -53,7 +55,6 @@ I went for a mobile first approach, working top down I started with styling the 
 ### What I learned
 
 I learnt that I really enjoy Chart.js. I found having good documentation accompanied by some in depth youtube videos made it relatively easy to work with.
-
 
 ### Useful resources
 
