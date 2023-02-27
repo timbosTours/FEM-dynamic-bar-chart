@@ -75,6 +75,7 @@ function updateChart() {
             type: 'bar',
             data,
             options: {
+                animation: false,
                 layout: {
                     padding: {
                         top: 30,
